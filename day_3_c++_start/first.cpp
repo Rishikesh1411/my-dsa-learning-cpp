@@ -1,0 +1,8 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    cout << "Hello, World! " <<endl;
+    cout << "This project uses the C++14 \n language standard version." << endl;
+
+};
