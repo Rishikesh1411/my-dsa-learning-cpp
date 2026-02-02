@@ -69,6 +69,33 @@ int main(){
     //     cout<<endl;
     // }
 
+    //7.print number in reverse order
+    // int row,col;
+    // for(row=5;row>=1;row--){
+    //     for(col=1;col<=row;col++){
+    //         cout<<col<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // //method 2
+    // int row,col;
+    // for(row=1;row<=5;row++){
+    //     for(col=1;col<=5-(row-1);col++){
+    //         cout<<col<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    //8.print row number in reverse order
+    int row,col;
+    for(row=5;row>=1;row--){
+        for(col=5;col<=row;col--){
+            cout<<col<<" ";
+        }
+        cout<<endl;
+    }
+
 
 
 
