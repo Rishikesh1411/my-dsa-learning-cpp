@@ -1,0 +1,17 @@
+# Ignore compiled executables (Windows)
+*.exe
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore debug files
+*.out
+*.a
+
+# Ignore VS Code settings (optional)
+.vscode/
+
+# Ignore temporary files
+*.log
+*.tmp
