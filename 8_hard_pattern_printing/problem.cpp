@@ -134,24 +134,40 @@ int main(){
     //  cout<<endl;
     
     // }
+    // //6.print alphabet at row from row to A form last
+    // int row,n;
+    // cout<<"Enter number of n : ";
+    // cin>>n;
+    // for(row=1;row<=n;row++){
+    //     char ch = 'A'+(row-1);
+    //     //print spaces
+    //     for(int space=1;space<=(n-row);space++){
+    //         cout<<"  ";
 
-    int row,n;
+    //     }
+    //     //print alphabets
+    //     for(char col='A';col<=ch;col++){
+    //         cout<<ch<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+     //7.print number from reverse in opposite pattern
+    int row,col,space,n;
     cout<<"Enter number of n : ";
     cin>>n;
     for(row=1;row<=n;row++){
-        char ch = 'A'+(row-1);
         //print spaces
-        for(int space=1;space<=(n-row);space++){
+        for(space=1;space<=(n-row);space++){
             cout<<"  ";
-
         }
-        //print alphabets
-        for(char col='A';col<=ch;col++){
-            cout<<ch<<" ";
+        //print numbers
+        for(col=row;col>=1;col--){
+            cout<<col<<" ";
         }
         cout<<endl;
     }
-
+ 
     
 
 }
