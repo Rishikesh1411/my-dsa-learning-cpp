@@ -62,25 +62,28 @@ int main(){
     // }
 
     //6.continue statement
-    int n, x;
-    cout << "Enter n: ";
-    cin >> n;
-    cout << "Enter x (number to skip): ";
-    cin >> x;
+    // int n, x;
+    // cout << "Enter n: ";
+    // cin >> n;
+    // cout << "Enter x (number to skip): ";
+    // cin >> x;
 
-    int i = 1;  // start from 1
-    while (i <= n) {
-        if (i == x) {
-            cout << "Skipping " << x << endl;
-            i++;            // move to next number
-            continue;       // skip printing x
-        }
-        cout << "Place " << i << ": " << i << endl;
-        i++;  // increment counter
-    }
+    // int i = 1;  // start from 1
+    // while (i <= n) {
+    //     if (i == x) {
+    //         cout << "Skipping " << x << endl;
+    //         i++;            // move to next number
+    //         continue;       // skip printing x
+    //     }
+    //     cout << "Place " << i << ": " << i << endl;
+    //     i++;  // increment counter
+    // }
 
-    return 0;
+    // return 0;
 
+    //7. break statement in for loop
+
+    
 
 
 
