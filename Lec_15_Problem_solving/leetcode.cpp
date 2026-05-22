@@ -1,66 +1,40 @@
 #include <iostream>
-#include <cmath>
+#include <cmath>   // for pow() and round()
 using namespace std;
 
-int countDigit(int num)
-{
-    if (num == 0)
-        return 1;
-
-    int digit = 0;
-    if (num < 0)
-        num = -num;
-
-    while (num)
-    {
-        digit++;
+// Function to count digits in a number
+int countDigits(int num) {
+    int count = 0;
+    while (num != 0) {
+        count++;
         num /= 10;
     }
-    return digit;
+    return count;
 }
 
-int intPow(int base, int exp)
-{
-    int result = 1;
-    while (exp > 0)
-    {
-        result *= base;
-        exp--;
-    }
-    return result;
-}
+// Function to check if a number is Armstrong
+bool isArmstrong(int num) {
+    int digits = countDigits(num);
+    int sum = 0, temp = num;
 
-bool Armstrong(int num, int digit)
-{
-    if (num < 0)
-        return false;
-
-    int temp = num;
-    int rem;
-    int ans = 0;
-    while (temp)
-    {
-        rem = temp % 10;
-        ans += intPow(rem, digit);
+    while (temp != 0) {
+        int rem = temp % 10;
+        sum += static_cast<int>(round(pow(rem, digits))); // FIX: round before casting
         temp /= 10;
     }
 
-    return ans == num;
+    return sum == num;
 }
 
-int main()
-{
-    int num;
+int main() {
+    int n;
     cout << "Enter a number: ";
-    cin >> num;
+    cin >> n;
 
-    int digit = countDigit(num);
-    bool ans = Armstrong(num, digit);
-
-    if (ans)
-        cout << num << " is an Armstrong number\n";
+    if (isArmstrong(n))
+        cout << n << " is an Armstrong number." << endl;
     else
-        cout << num << " is not an Armstrong number\n";
+        cout << n << " is NOT an Armstrong number." << endl;
 
     return 0;
 }
